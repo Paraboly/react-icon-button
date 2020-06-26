@@ -15,7 +15,7 @@
     "lint:js": "eslint --fix",
     "lint:css": "stylelint --fix",
     "lint:scss": "stylelint --fix --syntax scss",
-    "publish": "npm run build && npm publish --access public"
+    "publish": "npm run build"
   },
   "dependencies": {
     "prop-types": "^15.7.2"
