@@ -22,7 +22,7 @@ npm i @paraboly/react-icon-button
 # Usage
 
 Please check the storybook's example to get the usage of the library.
-You can simply clone the project and `npm i && npm start` to check the how to use the library with alive example.
+You can clone the project and `npm i && npm start` to check the how to use the library with alive example.
 
 ```js
 import IconButton from "@paraboly/react-icon-button";
