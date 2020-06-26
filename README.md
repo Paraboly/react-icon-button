@@ -10,7 +10,7 @@
 
 <p align="center">
   <img alt="React Icon Button"
-        src="assets/Screenshots/react-library-boilerplate.png" />
+        src="assets/Screenshots/react-icon-button.gif" />
 </p>
 
 # Install
