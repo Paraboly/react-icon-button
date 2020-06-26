@@ -13,6 +13,12 @@
         src="assets/Screenshots/react-library-boilerplate.png" />
 </p>
 
+# Install
+
+```sh
+npm i @paraboly/react-icon-button
+```
+
 # Usage
 
 Please check the storybook's example to get the usage of the library.
