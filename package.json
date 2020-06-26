@@ -2,6 +2,7 @@
   "name": "@paraboly/react-icon-button",
   "main": "lib/IconButton.js",
   "module": "lib/IconButton.es.js",
+  "version": "0.1.0",
   "scripts": {
     "start": "npm-run-all build:rollup --parallel start:*",
     "start:rollup": "rollup --config --sourcemap --watch",
@@ -13,7 +14,8 @@
     "format": "prettier --write",
     "lint:js": "eslint --fix",
     "lint:css": "stylelint --fix",
-    "lint:scss": "stylelint --fix --syntax scss"
+    "lint:scss": "stylelint --fix --syntax scss",
+    "publish": "npm run build && npm publish --access public"
   },
   "dependencies": {
     "prop-types": "^15.7.2"
