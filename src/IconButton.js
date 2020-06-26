@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 /**
  * ? Local Imports
  */
 import "./IconButton.scss";
-import styles from "./IconButton.style";
+import styles, { _buttonStyle } from "./IconButton.style";
 
 const IconButton = (props) => {
   const {
@@ -13,16 +13,31 @@ const IconButton = (props) => {
     iconStyle,
     buttonStyle,
     imageSource,
-    iconTextStyle,
-    iconTextContainerStyle,
+    textStyle,
+    textDisable = false,
+    textContainerStyle,
+    hoverColor = "rgba(255, 255, 255, 0.08)",
   } = props;
+
+  const [backgroundColor, setBackgroundColor] = useState("transparent");
+
+  const onMouseEnter = () => {
+    setBackgroundColor(hoverColor);
+  };
+  const onMouseLeave = () => {
+    setBackgroundColor("transparent");
+  };
+
   return (
     <div className="icon-button">
       <div>
         <button
           type="button"
-          style={buttonStyle || styles.buttonStyle}
           onClick={onPress}
+          className="button-style"
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          style={buttonStyle || _buttonStyle(backgroundColor)}
         >
           <img
             alt={iconAlt}
@@ -31,9 +46,11 @@ const IconButton = (props) => {
           />
         </button>
       </div>
-      <div style={iconTextContainerStyle || styles.iconTextContainerStyle}>
-        <span style={iconTextStyle || styles.iconTextStyle}>{text}</span>
-      </div>
+      {!textDisable && (
+        <div style={textContainerStyle || styles.textContainerStyle}>
+          <span style={textStyle || styles.textStyle}>{text}</span>
+        </div>
+      )}
     </div>
   );
 };

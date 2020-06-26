@@ -1,15 +1,17 @@
 import { storiesOf } from "@storybook/react";
 import React from "react";
-import ReactComponent from "../lib/ReactComponent.es";
+import IconButton from "../lib/IconButton.es";
 
-const ReactComponentContainer = () => (
+const filterIcon = require("./assets/filter-icon.svg");
+
+const IconButtonContainer = () => (
   // ? States (Just an example)
   // const [title, setTitle] = useState(deadpoolQuotes[0]);
 
   <div>
-    <ReactComponent title="Bad Deadpool... Good Deadpool!" />
+    <IconButton text="Filter" imageSource={filterIcon} />
   </div>
 );
-storiesOf("ReactComponent", module).add("ReactComponent", () => (
-  <ReactComponentContainer />
+storiesOf("IconButton", module).add("IconButton", () => (
+  <IconButtonContainer />
 ));
