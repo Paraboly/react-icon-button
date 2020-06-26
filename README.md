@@ -27,7 +27,7 @@ You can simply clone the project and `npm i && npm start` to check the how to us
 ```js
 import IconButton from "@paraboly/react-icon-button";
 
-<IconButton text="Filter" imageSource={filterIcon} />;
+<IconButton text="Filter" imageSource={filterIcon} onPress={() => {}} />;
 ```
 
 ### Configuration - Props
